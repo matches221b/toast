@@ -1,0 +1,203 @@
+<!--sony.html for homepage 2020-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Sony
+{% endblock %}
+
+{% block main %}
+
+    <h1>Sony's Consoles</h1>
+
+    {% if arrival_method == "GET" %}
+    <!--Info to display when user gets to page not by asking for inflation adjusted prices-->
+
+    Arrival Method: {{ arrival_method }}
+
+    {{ console_info }}
+
+    <table class="consoles microsoft">
+    <!--<table class="console_table">-->
+        <tr>
+            <th>#</th>
+            <th>Console<br>Name</th>
+            <th>Release Date<a href="#footnote_1">[1]</a></th>
+            <th>Release<br>Price<a href="#footnote_2">[2]</a></th>
+            <th>Gaming<br>Generation<a href="#footnote_3">[3]</a></th>
+            <th>Company</th>
+        </tr>
+
+        {% for item in console_info %}
+
+        <tr>
+            <td style="text-align: center">{{ item.cardinal_number }}</td>
+            <td>{{ item.console_name }}</td>
+            <td style="text-align: right">{{ item.usa_release_date }}</td>
+            <!--<td class="money">{{ item.usa_release_date_usa_price }}</td>-->
+            <!--<td class="money">{{ item.formatted_release_price }}</td>-->
+            <td class="money" style="text-align: center">{{ item.formatted_release_price }}</td>
+            <!--<td style="text-align: center">{{ item.usa_release_date_usa_price }}</td>-->
+            <td style="text-align: center">{{ item.gaming_generation }}</td>
+            <td style="text-align: center">{{ item.company }}</td>
+        </tr>
+
+        {% endfor %}
+
+        <!--Row for getting user input for adjusting prices for inflation-->
+        <tr>
+            <td colspan="6">
+                <br>
+                <form action="/sony" method="post">
+                    <table class="inflation">
+                    <!--<table>-->
+                        <tr>
+                            <th colspan="2">Adjust the Release Prices for Inflation</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right">Select a Month:</td>
+                            <td>
+                                <select name="month" id="month">
+                                    <option value="" diabled selected hidden></option>
+                                    {% for item in months %}
+                                    <option value="{{ months[item] }}">{{ item }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right">Select a Year:</td>
+                            <td>
+                                <select name="year" id="year">
+                                    <option value="" diabled selected hidden></option>
+                                    {% for item in years %}
+                                    <option value="{{ item }}">{{ item }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center" colspan="2">
+                                <!--<button class="btn btn-primary" type="submit">Submit</button>-->
+                                <button class="fab fa-xbox" type="submit"> Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <br>
+            </td>
+        </tr>
+
+        <!--Row for footnotes-->
+        <tr>
+            <td colspan="6">
+                <b>Footnotes</b>
+                <br>
+                <ol class="olno-space">
+                    <li id="footnote_1">The release dates are the dates the consoles were released in the <a href="https://en.wikipedia.org/wiki/United_States">United States</a>.</li>
+                    <li id="footnote_2">The release prices are the United States release date prices in <a href="https://en.wikipedia.org/wiki/United_States_dollar">United States dollars</a>.</li>
+                    <li id="footnote_3">The gaming generation information refers to the applicable <a href="https://en.wikipedia.org/wiki/Home_video_game_console#List_of_home_video_game_consoles">generation of home video game consoles</a>.</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+    {% elif arrival_method == "POST" %}
+    <!--Info to display when user gets to page by asking for inflation adjusted prices-->
+
+    Arrival Method: {{ arrival_method }}
+
+    <table class="consoles microsoft">
+    <!--<table class="console_table">-->
+        <tr>
+            <th>#</th>
+            <th>Console<br>Name</th>
+            <th>Release Date<a href="#footnote_1">[1]</a></th>
+            <th>Release<br>Price<a href="#footnote_2">[2]</a></th>
+            <th>Release Price in<br> {{ inflation_month_short  }} {{ inflation_year }} Dollars<a href="#footnote_3">[3]</a></th>
+            <th>Gaming<br>Generation<a href="#footnote_4">[4]</a></th>
+            <th>Company</th>
+        </tr>
+
+        {% for item in console_info %}
+
+        <tr>
+            <td style="text-align: center">{{ item.cardinal_number }}</td>
+            <td>{{ item.console_name }}</td>
+            <td style="text-align: right">{{ item.usa_release_date }}</td>
+            <!--<td class="money">{{ item.usa_release_date_usa_price }}</td>-->
+            <!--<td style="text-align: center">{{ item.usa_release_date_usa_price }}</td>-->
+            <!--<td style="text-align: center">{{ item.formatted_release_price }}</td>-->
+            <td class="money" style="text-align: center">{{ item.formatted_release_price }}</td>
+            <!--<td style="text-align: center">/*Insert adjusted for inflation price.*/</td>-->
+            <td class="money" style="text-align: center">{{ item.inflation_answer }}</td>
+            <td style="text-align: center">{{ item.gaming_generation }}</td>
+            <td style="text-align: center">{{ item.company }}</td>
+        </tr>
+
+
+
+        {% endfor %}
+
+        <!--Row for getting user input for adjusting prices for inflation-->
+        <tr>
+            <td colspan="7">
+                <br>
+                <form action="/sony" method="post">
+                    <table class="inflation">
+                    <!--<table>-->
+                        <tr>
+                            <th colspan="2">Adjust the Release Prices for Inflation</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right">Select a Month:</td>
+                            <td>
+                                <select name="month" id="month">
+                                    <option value="" diabled selected hidden></option>
+                                    {% for item in months %}
+                                    <option value="{{ months[item] }}">{{ item }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right">Select a Year:</td>
+                            <td>
+                                <select name="year" id="year">
+                                    <option value="" diabled selected hidden></option>
+                                    {% for item in years %}
+                                    <option value="{{ item }}">{{ item }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center" colspan="2">
+                                <!--<button class="btn btn-primary" type="submit">Submit</button>-->
+                                <button class="fab fa-xbox" type="submit"> Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <br>
+            </td>
+        </tr>
+
+        <!--Row for footnotes-->
+        <tr>
+            <td colspan="7">
+                <b>Footnotes</b>
+                <br>
+                <ol class="olno-space">
+                    <li id="footnote_1">The release dates are the dates the consoles were released in the <a href="https://en.wikipedia.org/wiki/United_States">United States</a>.</li>
+                    <li id="footnote_2">The release prices are the United States release date prices in <a href="https://en.wikipedia.org/wiki/United_States_dollar">United States dollars</a>.</li>
+                    <li id="footnote_3">The gaming generation information refers to the applicable <a href="https://en.wikipedia.org/wiki/Home_video_game_console#List_of_home_video_game_consoles">generation of home video game consoles</a>.</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+    {% endif %}
+
+{% endblock %}
+

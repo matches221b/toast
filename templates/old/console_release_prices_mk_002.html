@@ -1,0 +1,492 @@
+<!--nintendo.html for homepage 2020-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+
+    {% if company == "All" %}
+
+        All Consoles
+
+    {% else %}
+
+        {{ company }}
+
+    {% endif %}
+
+{% endblock %}
+
+{% block main %}
+
+<div class="level_0_container">
+
+    <!--Left Column-->
+    <div class="level_01_container">
+
+        <br>
+        <button onclick="show_hide_spinner()">Button!</button>
+
+        <br>
+
+        <br>
+
+        <h1 class="heading_01">Console Release Prices</h1>
+
+        <table class="js-sort-table console_table" id="release_price_table">
+
+            <tr class="header">
+
+                <th class="js-sort-number">#</th>
+
+                <th style="text-align:center">Console Name</th>
+
+                <th class="js-sort-date">Release Date<a href="#footnote_1">[1]</a></th>
+
+                <th>Release<br>Price<a href="#footnote_2">[2]</a></th>
+
+                <th class="inflation_adjusted_price_cell">Release Price in<br> {{ inflation_month_short  }} {{ inflation_year }} Dollars<a href="#footnote_3">[3]</a></th>
+
+                <th>Gaming<br>Generation<a href="#footnote_4">[4]</a></th>
+
+                <th>Company</th>
+
+                </tr>
+
+            {% for item in console_info %}
+
+                <tr>
+                    <td data-input="number" style="text-align: center">{{ item.cardinal_number }}</td>
+                    <td data-input="name">{{ item.console_name }}</td>
+                    <td style="text-align: right">{{ item.usa_release_date }}</td>
+                    <td class="money" style="text-align: center">{{ item.formatted_release_price }}</td>
+                    <td class="money inflation_adjusted_price_cell" id="{{ item.console_name_underscored }}" style="text-align: center">{{ item.inflation_answer }}</td>
+                    <td style="text-align: center">{{ item.gaming_generation }}</td>
+                    <td style="text-align: center">{{ item.company }}</td>
+                </tr>
+
+            {% endfor %}
+
+        </table>
+
+
+        <!--</div>-->
+
+
+        <!--</div>-->
+
+        <!--<table class="console_table release_prices_table" id="laboratory_table">-->
+
+        <!--    <tr class="header">-->
+
+        <!--        <th class="js-sort-number">#</th>-->
+
+        <!--        <th style="text-align:center">Console Name</th>-->
+
+        <!--        <th class="js-sort-date">Release Date</th>-->
+
+        <!--        <th>Release<br>Price</th>-->
+
+        <!--        <th class="inflation_adjusted_price_cell">Release Price in<br> {{ inflation_month_short  }} {{ inflation_year }} Dollars</th>-->
+
+        <!--        <th>Gaming<br>Generation</th>-->
+
+        <!--        <th>Company</th>-->
+
+        <!--    </tr>-->
+
+        <!--    <tr>-->
+
+        <!--        <td>0</td>-->
+
+        <!--        <td>Console Zero</td>-->
+
+        <!--        <td>January 1, 1900</td>-->
+
+        <!--        <td>$99.99</td>-->
+
+        <!--        <td class="inflation_adjusted_price_cell">[//Insert inflation adjusted price.//]</td>-->
+
+        <!--        <td>0</td>-->
+
+        <!--        <td>Wayne Industries</td>-->
+
+        <!--    </tr>-->
+
+        <!--</table>-->
+
+        <!--<br>-->
+        <!--<button onclick="search_function_001()">Search Function 001</button>-->
+        <!--<br>-->
+
+        <!--<br>-->
+        <!--<button onclick="search_function_002()">Search Function 002</button>-->
+        <!--<br>-->
+
+        <!--<br>-->
+        <!--<button onclick="search_function_003()">Search Function 003</button>-->
+        <!--<br>-->
+
+        <!--<br>-->
+        <!--<button onclick="search_function_004()">Search Function 004</button>-->
+        <!--<br>-->
+
+        <!--<br>-->
+        <!--<div id="search_output"></div>-->
+
+        <!--<div class="spinner_wrapper" id="spinner_wrapper">-->
+
+        <!--    <div class="spinner_content">-->
+
+        <!--        [//Insert the spinner.//]-->
+
+        <!--        <br>-->
+
+        <!--        <div class="spinning_loader" id="spinner"></div>-->
+
+        <!--    </div>-->
+
+        <!--</div>-->
+
+        <!--<br>-->
+
+        <!--<div class="spinning_loader">-->
+        <!--    <div class="loader" id="spinner"></div>-->
+        <!--</div>-->
+        <!--<div class="spinning_loader" id="spinner"></div>-->
+
+
+        <br>
+
+        <!--<table>-->
+        <!--    <tr>-->
+        <!--        <th>Search Buttons</th>-->
+        <!--        <th>Search Button Outputs</th>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="search_function_001()">Search Function 001</button></td>-->
+        <!--        <td><div id="search_output_001"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="search_function_002()">Search Function 002</button></td>-->
+        <!--        <td><div id="search_output_002"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="search_function_003()">Search Function 003</button></td>-->
+        <!--        <td><div id="search_output_003"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="search_function_004()">Search Function 004</button></td>-->
+        <!--        <td><div id="search_output_004"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="search_function_005()">Search Function 005</button></td>-->
+        <!--        <td><div id="search_output_005"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="search_function_006()">Search Function 006</button></td>-->
+        <!--        <td><div id="search_output_006"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="spinner_function_001()">Spinner Function 001</button></td>-->
+        <!--        <td><div id="spinner_function_001"></div></td>-->
+        <!--    </tr>-->
+        <!--    <tr>-->
+        <!--        <td><button onclick="spinner_function_002()">Spinner Function 002</button></td>-->
+        <!--        <td><div id="spinner_function_002"></div></td>-->
+        <!--    </tr>-->
+        <!--</table>-->
+
+
+    <script>
+        function search_function_001() {
+
+            const search_result = document.getElementById("laboratory_table").rows[0].cells.length;
+
+            document.getElementById("search_output_001").innerHTML = "Found " + search_result + " cells in the table's first row"
+        }
+
+        function search_function_002() {
+
+            const search_result = document.getElementById("laboratory_table").rows[0].cells[0].innerHTML;
+
+            document.getElementById("search_output_002").innerHTML = search_result
+        }
+
+        function search_function_003() {
+
+            // Column header from table
+            const column_header_text = document.getElementById("laboratory_table").rows[0].cells[4].innerHTML
+
+            // Column that function should hide
+            const target_column_text = "Release Price in";
+
+            // Ascertain whether
+            const comparison_output = column_header_text.includes(target_column_text)
+
+            document.getElementById("search_output_003").innerHTML = comparison_output
+
+        }
+
+        function search_function_004() {
+
+            // Put each element that has the "inflation_adjusted_price_cell" class in an array-like list of HTML elements
+            const inflation_adjusted_prices = document.getElementsByClassName("inflation_adjusted_price_cell");
+
+            // Get the number items in the array-like list of elements
+            const item_count = inflation_adjusted_prices.length;
+
+            // Output the number of items in the array-like list of elements
+            document.getElementById("search_output_004").innerHTML = item_count
+        }
+
+        function search_function_005() {
+
+            // Put each element that has the "inflation_adjusted_price_cell" class in an array-like list of HTML elements
+            const inflation_adjusted_prices = document.getElementsByClassName("inflation_adjusted_price_cell");
+
+            // Counting variable
+            let i;
+
+            // Iterate through each inflation-adjusted-price cell
+            for (i = 0; i < inflation_adjusted_prices.length; i++) {
+
+                // Set the background color of the ith inflation-adjusted-price cell
+                inflation_adjusted_prices[i].style.backgroundColor = "red";
+            }
+        }
+
+        function search_function_006() {
+
+            // http://talkerscode.com/webtricks/show-hide-table-column-using-javascript.php
+
+            // Put each element that has the "inflation_adjusted_price_cell" class in an array-like list of HTML elements
+            const inflation_adjusted_prices = document.getElementsByClassName("inflation_adjusted_price_cell");
+
+            // Counting variable
+            let i;
+
+            // Iterate through each inflation-adjusted-price cell
+            for (i = 0; i < inflation_adjusted_prices.length; i++) {
+
+                // Check whether the inflation-adjusted-price cell's diplay is "none"
+                if (inflation_adjusted_prices[i].style.display === "none") {
+
+                    // Show the inflation-adjusted-price cell
+                    inflation_adjusted_prices[i].style.display = "table-cell";
+
+                // In any other scenario . . .
+                } else {
+
+                    // Hide the inflation-adjusted-price cell
+                    inflation_adjusted_prices[i].style.display = "none";
+                }
+            }
+        }
+
+        function spinner_function_001() {
+
+            // // Put each element that has the "spinner" id in an array-like list of HTML elements
+            const spinner = document.getElementById("spinner");
+
+            // If the spinner is not showing
+            if (spinner.style.display === "none") {
+
+                // Show the spinner
+                spinner.style.display = "block"
+
+            // In any other scenario
+            } else {
+
+                // Hide the spinner
+                spinner.style.display = "none"
+            }
+        }
+
+        function spinner_function_002() {
+
+            // // Put each element that has the "spinner" id in an array-like list of HTML elements
+            const spinner = document.getElementById("spinner_wrapper");
+
+            // If the spinner is not showing
+            if (spinner.style.display === "none") {
+
+                // Show the spinner
+                spinner.style.display = "block"
+
+            // In any other scenario
+            } else {
+
+                // Hide the spinner
+                spinner.style.display = "none"
+            }
+        }
+
+        // function spinner_function_003() {
+
+        //     // // Put each element that has the "spinner" id in an array-like list of HTML elements
+        //     const spinner = document.getElementById("spinner_wrapper");
+
+        //     // If the spinner is not showing
+        //     if (spinner.style.display === "none") {
+
+        //         // Show the spinner
+        //         spinner.style.display = "block"
+
+        //     // In any other scenario
+        //     } else {
+
+        //         // Hide the spinner
+        //         spinner.style.display = "none"
+        //     }
+        // }
+
+    </script>
+
+        <!--<hr class="right_column_divider">-->
+
+        <!--<table class="js-sort-table console_table" id="release_price_table">-->
+
+        <!--    <thead>-->
+        <!--        <tr class="header">-->
+
+        <!--            <th class="js-sort-number">#</th>-->
+
+        <!--            <th style="text-align:center">Console Name</th>-->
+
+        <!--            <th class="js-sort-date">Release Date<a href="#footnote_1">[1]</a></th>-->
+
+        <!--            <th>Release<br>Price<a href="#footnote_2">[2]</a></th>-->
+
+        <!--            {% if arrival_method == "GET" %}-->
+
+        <!--                <th>Gaming<br>Generation<a href="#footnote_3">[3]</a></th>-->
+
+        <!--            {% elif arrival_method == "POST" %}-->
+
+        <!--                <th>Release Price in<br> {{ inflation_month_short  }} {{ inflation_year }} Dollars<a href="#footnote_3">[3]</a></th>-->
+
+        <!--                <th>Gaming<br>Generation<a href="#footnote_4">[4]</a></th>-->
+
+        <!--            {% endif %}-->
+
+
+        <!--            <th>Company</th>-->
+
+        <!--        </tr>-->
+
+        <!--    </thead>-->
+
+        <!--        {% for item in console_info %}-->
+
+        <!--            <tr>-->
+        <!--                <td data-input="number" style="text-align: center">{{ item.cardinal_number }}</td>-->
+        <!--                <td data-input="name">{{ item.console_name }}</td>-->
+        <!--                <td style="text-align: right">{{ item.usa_release_date }}</td>-->
+        <!--                <td class="money" style="text-align: center">{{ item.formatted_release_price }}</td>-->
+
+        <!--                {% if arrival_method == "POST" %}-->
+
+        <!--                    <td class="money" style="text-align: center">{{ item.inflation_answer }}</td>-->
+
+        <!--                {% endif %}-->
+
+        <!--                <td style="text-align: center">{{ item.gaming_generation }}</td>-->
+        <!--                <td style="text-align: center">{{ item.company }}</td>-->
+        <!--            </tr>-->
+
+        <!--        {% endfor %}-->
+
+            <!--</tbody>-->
+        <!--</table>-->
+
+        <!--<br>-->
+
+    </div>
+
+    <!--Right Column-->
+
+    <!--<div class="inflation_container">-->
+    <div class="top_right_corner">
+
+        <div class="spinner_wrapper" id="spinner_wrapper">
+
+            <div class="loaidng_text">
+
+                <h2>Getting release prices adjusted for inflation . . .</h2>
+
+            </div>
+
+            <div class="spinning_loader"></div>
+
+        </div>
+
+        <h2 class="right_column_header_h2" style="margin-top: 5px">Adjust Prices for Inflation</h2>
+        <h3 class="right_column_header_h3">(Javascript Version Mk_008)</h3>
+
+        <div class="inflation_row">
+
+            <div class="inflation_column right">Select a Year:&nbsp;</div>
+
+                <div class="inflation_column left">
+
+                    <select name="year" id="year_mk_008">
+
+                        <!--<option value="" diabled selected hidden></option>-->
+                        <!--<option value=""></option>-->
+                        <option value="" selected hidden></option>
+
+                            <!--For loop for populating the inflation years-->
+                            {% for item in years %}
+
+                                <option value="{{ item }}">{{ item }}</option>
+
+                            {% endfor %}
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        <div class="inflation_row">
+
+            <div class="inflation_column right">Select a Month:&nbsp;</div>
+
+            <div class="inflation_column left">
+
+                <select name="month" id="month_mk_008">
+
+                    <option value="" diabled selected hidden></option>
+
+                        {% for item in months %}
+
+                            <option value="{{ months[item] }}">{{ item }}</option>
+
+                        {% endfor %}
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <button class="nintendo_submit" id="submit_mk_008" onclick="submit_inflation_seeds()"><img src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/48/Retro-Mario-icon.png"> Submit Mk 008</button>
+
+        <br>
+
+        <button class="nintendo_submit" id="submit_mk_009" onclick=""><img src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/48/Retro-Mario-icon.png"> Submit Mk 009</button>
+
+        <hr class="right_column_divider">
+
+        <h2 class="right_column_header_h2">Global Filter</h2>
+        <h3 class="right_column_header_h3">(Searches the Entire Table)</h3>
+
+        <!--This search is using filter_tables_Mk_006-->
+        <input class="table_search" id="search" title="filter_tables_Mk_006" type="text" placeholder="Search the entire table . . .">
+        <br>
+
+    </div>
+
+</div>
+
+{% endblock %}

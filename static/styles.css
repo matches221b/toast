@@ -1,0 +1,1856 @@
+/*styles.css for cs50 2020's homepage assignment*/
+
+/*https://nostalgic-css.github.io/NES.css/*/
+
+/*_________________________________*/
+/* Begin the "All Consoles" Styles */
+/*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /*_____________________________*/
+    /* Begin the Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    h1.all_consoles
+    {
+        color: black;
+        font-weight: bold;
+        /*background-color: pink;*/
+        text-align: center;
+    }
+
+    .level_0_container
+    {
+        /* Add a top margin to avoid content overlay */
+        margin-top: 25px;
+        /*background-color: green;*/
+        font-family: Arvo;
+    }
+
+    .level_01_container
+    {
+        float: left;
+        width: 75%;
+        font-size: 1.3em;
+        /*background-color: red;*/
+    }
+
+    /*___________________________*/
+    /* End the Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+/*_______________________________*/
+/* End the "All Consoles" Styles */
+/*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+
+/*nav .navbar-brand*/
+/*{*/
+    /* size for brand */
+/*    font-size: xx-large;*/
+/*}*/
+
+/* colors for brand */
+/*nav .navbar-brand .blue*/
+/*{*/
+/*    color: #537fbe;*/
+/*}*/
+
+/*nav .navbar-brand .red*/
+/*{*/
+/*    color: #ea433b;*/
+/*}*/
+
+/*nav .navbar-brand .yellow*/
+/*{*/
+/*    color: #f5b82e;*/
+/*}*/
+
+/*nav .navbar-brand .green*/
+/*{*/
+/*    color: #2e944b;*/
+/*}*/
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.footnote_items ol
+{
+    padding-left: 0;
+}
+
+ol
+{
+    padding-left: 20px;
+}
+
+.olno-space {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+}
+
+/*ol.footnotes_mobile*/
+/*{*/
+/*  margin-top: 0;*/
+/*  margin-bottom: 0;*/
+  /*padding-left: 1.15em;*/
+/*  padding-left: 18px;*/
+/*  background: purple;*/
+
+/*}*/
+/*.inflation_table table tr td*/
+/*{*/
+/*    border: 3px solid orange;*/
+/*}*/
+
+table.center_column td
+{
+    text-align: right;
+}
+
+div.test
+{
+    display: block;
+    background: green;
+    display: inline;
+    padding: 0;
+}
+
+div.toast
+{
+    display: block;
+    background: red;
+    display: inline;
+    padding: 0;
+}
+
+.center_table
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*.console_table table*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border: 10px solid black;*/
+/*}*/
+
+/*table.console*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border: 3px solid black;*/
+/*}*/
+
+/*.console th, td*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border: 3px solid orange;*/
+/*}*/
+
+/*table.consoles, .consoles th, .consoles td*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border: 3px solid black;*/
+/*    padding: 5px;*/
+/*}*/
+
+table.consoles
+{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    padding: 50px;
+}
+
+table.consoles th
+{
+    /*background-color: rgb(232, 247, 255);*/
+    border: 2px solid black;
+    padding: 5px;
+}
+
+table.consoles td
+{
+    /*background-color: rgb(232, 247, 255);*/
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.zebra_banding tr:nth-child(even)
+{
+    background-color: white;
+}
+
+.zebra_banding tr:nth-child(odd)
+{
+    background-color: #e6e6e6;
+}
+
+/*table.inflation, .inflation th .inflation td*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+    /*border: 3px solid black;*/
+/*}*/
+
+table.inflation
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse:collapse;
+    border:none;
+    /*border: 3px solid black;*/
+}
+
+/*table.inflation, .inflation th .inflation td*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border: 3px solid black;*/
+/*}*/
+
+table.console
+{
+    border-collapse:collapse;
+}
+
+/*.console_table*/
+/*{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border: 3px solid black;*/
+/*}*/
+
+/*.console_table table, th, td*/
+/*{*/
+/*    border: 10px solid black;*/
+/*}*/
+
+.table_border
+{
+    border: 1px solid;
+}
+
+.cell_bottom_border
+{
+    border-bottom: 1px solid black;
+}
+
+.total_purchase_price
+{
+    text-align: center;
+    padding: 1px
+}
+
+.hr_division_line
+{
+    background-color: black;
+    height: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.no_padding
+{
+    padding: 1px;
+}
+
+#total_purchase_price table
+{
+    border: 10px solid orange;
+}
+
+.total_purchase_price table, td
+{
+    border-collapse: collapse;
+    border: 0px solid orange;
+    border-spacing: 0px;
+    padding: 1px;
+}
+
+.bottom_border
+{
+    border-bottom: 2px solid black;
+}
+
+.bought_table
+{
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-spacing: 10px;
+}
+
+.bought_table td
+{
+    padding: 2px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    /*border-spacing: 50px;*/
+}
+
+#center_and_bold
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+#cellpadding
+{
+    padding: 25px;
+}
+
+.cellpadding
+{
+    padding: 5px;
+}
+
+.table_banded_hover table
+{
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid black;
+}
+
+.table_banded_hover td
+{
+    padding: 0px /* top */
+             5px /* right */
+             0px  /* bottom */
+             5px; /* left */
+    /*border: 0px solid black;*/
+
+}
+
+.table_banded_hover tr:nth-child(even)
+{
+    background-color: rgb(230, 230,230);
+}
+
+.table_banded_hover tr:hover
+{
+    background-color: rgb(255, 255, 230);
+}
+
+.table_banded_hover th
+{
+    background-color: rgb(232, 247, 255);
+    /*border: 3px solid black;*/
+}
+
+.banding_even:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+.sale
+{
+    color: green;
+}
+
+.purchase
+{
+    color: red;
+}
+
+.assets
+{
+    border: 1px solid orange;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.assets td, th
+{
+    font-size: large;
+}
+
+.sell td, th
+{
+    border: 0px solid black;
+    /*font-size: 19px;*/
+    font-size: medium;
+}
+
+.assets
+{
+    /*roughly 14 pt*/
+    font-size: 19px;
+}
+
+
+
+/*h2*/
+/*{*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*}*/
+
+.dark
+{
+    background-color: white;
+    color: black;
+
+}
+
+th
+{
+    text-align: center;
+}
+
+.money td
+{
+    text-align: right;
+    background-color: solid orange;
+    font-weight: bold;
+}
+
+sup
+{
+  /*vertical-align: text-top;*/
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.microsoft th
+{
+    background-color: #e5fae3;
+}
+
+/*button*/
+/*{*/
+/*    height: 45px;*/
+/*    background-color: #e5fae3;*/
+/*    transition-duration: 0.4s;*/
+/*    cursor: pointer;*/
+    /*padding-top: 50px;*/
+    /*padding-right: 30px;*/
+    /*padding-bottom: 50px;*/
+    /*padding-left: 80px;*/
+/*}*/
+
+/*button:hover*/
+/*{*/
+/*  background-color: #4CAF50;*/
+/*  color: white;*/
+/*}*/
+
+.nintendo button
+{
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+  height: 60px
+}
+
+.nintendo button:hover
+{
+    /*background-color: #f44336;*/
+    /*background-color: green;*/
+    background-color: #ffe3e4;
+    /*background-color: #E70009;*/
+    /*background-color: solid black;*/
+    /*color: white;*/
+    /*color: black;*/
+}
+
+/*img {*/
+/*  border: 5px solid #555;*/
+/*}*/
+
+h1.nintendo
+{
+    /*font-family: 'Press Start 2P', cursive;*/
+    font-family: 'Press Start 2P';
+    color: #E70009;
+    font-weight: bold;
+    text-align: center;
+}
+
+.console_table th
+{
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    font-size: .9em;
+    background-color: #e3fffd;
+}
+
+.console_table td
+{
+    vertical-align:top;
+    font-size: .9em;
+}
+
+
+
+.nintendo th
+{
+    /*background-color: #ffe3e4;*/
+    background-color: #faa005;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    /*font-family: 'Press Start 2P';*/
+    /*font-size: smaller;*/
+}
+
+.nintendo td
+{
+    vertical-align: top;
+}
+
+/* Table Sorting Styles */
+
+table { border: 1px solid black; border-collapse: collapse; }
+
+th, td { padding: 2px 5px; border: 1px solid black; }
+
+thead { background: #ddd; }
+
+table#demo2.js-sort-0 tbody tr td:nth-child(1),
+table#demo2.js-sort-1 tbody tr td:nth-child(2),
+table#demo2.js-sort-2 tbody tr td:nth-child(3),
+table#demo2.js-sort-3 tbody tr td:nth-child(4),
+table#demo2.js-sort-4 tbody tr td:nth-child(5),
+table#demo2.js-sort-5 tbody tr td:nth-child(6),
+table#demo2.js-sort-6 tbody tr td:nth-child(7),
+table#demo2.js-sort-7 tbody tr td:nth-child(8),
+table#demo2.js-sort-8 tbody tr td:nth-child(9),
+table#demo2.js-sort-9 tbody tr td:nth-child(10) {
+    background: #dee;
+}
+
+/* End Table Sorting Styles */
+
+/***************************/
+/*                         */
+/*  Navigation Bar Styles  */
+/*                         */
+/***************************/
+
+    /*_____________________________*/
+    /* Begin the Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /*.navbar {*/
+    /*  overflow: hidden;*/
+    /*  background-color: #333;*/
+    /*  position: fixed;*/
+    /*  top: 0;*/
+    /*  width: 100%;*/
+    /*}*/
+
+    /*.navbar a {*/
+    /*  float: left;*/
+    /*  display: block;*/
+    /*  color: #f2f2f2;*/
+    /*  text-align: center;*/
+    /*  padding: 14px 16px;*/
+    /*  text-decoration: none;*/
+    /*  font-size: 17px;*/
+    /*}*/
+
+    /*.navbar a:hover {*/
+    /*  background: #ddd;*/
+    /*  color: black;*/
+    /*}*/
+
+    /*.main {*/
+    /*  padding: 16px;*/
+    /*  margin-top: 30px;*/
+      /* Used in this example to enable scrolling */
+      /*height: 1500px; */
+    /*}*/
+
+    /*
+     /* The navigation bar */
+    /*.navbar {*/
+    /*  overflow: hidden;*/
+    /*  background-color: #333;*/
+      /* Set the navbar to fixed position */
+    /*  position: fixed; */
+      /* Position the navbar at the top of the page */
+    /*  top: 0; */
+      /* Full width */
+    /*  width: 100%; */
+    /*}*/
+
+    /* Links inside the navbar */
+    /*.navbar a {*/
+    /*  float: left;*/
+    /*  display: block;*/
+    /*  color: #f2f2f2;*/
+    /*  text-align: center;*/
+    /*  padding: 14px 16px;*/
+    /*  text-decoration: none;*/
+    /*}*/
+
+    /* Change background on mouse-over */
+    /*.navbar a:hover {*/
+    /*  background: #ddd;*/
+    /*  color: black;*/
+    /*}*/
+
+    /* Main content */
+    /*.main {*/
+      /* Add a top margin to avoid content overlay */
+    /*  margin-top: 30px; */
+    /*}*/
+
+     /* Style the navbar */
+    /*#navbar {*/
+    /*  overflow: hidden;*/
+    /*  background-color: #333;*/
+    /*}*/
+
+    /* Navbar links */
+    /*#navbar a {*/
+    /*  float: left;*/
+    /*  display: block;*/
+    /*  color: #f2f2f2;*/
+    /*  text-align: center;*/
+    /*  padding: 14px;*/
+    /*  text-decoration: none;*/
+    /*}*/
+
+    /* Page content */
+    /*.content {*/
+    /*  padding: 16px;*/
+    /*}*/
+
+    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    /*.sticky {*/
+    /*  position: fixed;*/
+    /*  top: 0;*/
+    /*  width: 100%;*/
+    /*}*/
+
+    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+    /*.sticky + .content {*/
+    /*  padding-top: 60px;*/
+    /*}*/
+
+    /* Style the navigation menu */
+    /*.topnav {*/
+    /*  overflow: hidden;*/
+    /*  background-color: #333;*/
+    /*  position: relative;*/
+    /*}*/
+
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    /*.topnav #myLinks {*/
+    /*  display: none;*/
+    /*}*/
+
+    /* Style navigation menu links */
+    /*.topnav a {*/
+    /*  color: white;*/
+    /*  padding: 14px 16px;*/
+    /*  text-decoration: none;*/
+    /*  font-size: 17px;*/
+    /*  display: block;*/
+    /*}*/
+
+    /* Style the hamburger menu */
+    /*.topnav a.icon {*/
+    /*  background: black;*/
+    /*  display: block;*/
+    /*  position: absolute;*/
+    /*  right: 0;*/
+    /*  top: 0;*/
+    /*}*/
+
+    /* Add a grey background color on mouse-over */
+    /*.topnav a:hover {*/
+    /*  background-color: #ddd;*/
+    /*  color: black;*/
+    /*}*/
+
+    /* Style the active link (or home/logo) */
+    /*.active_nav*/
+    /*{*/
+    /*  background-color: #4CAF50;*/
+    /*  color: white;*/
+    /*}*/
+
+
+    /*div.navigation*/
+    /*{*/
+    /*    margin-left: auto;*/
+    /*    margin-right: auto;*/
+    /*    width: 100%;*/
+    /*    text-align: center;*/
+    /*    background-color: black;*/
+    /*}*/
+
+    /*div.navigation span*/
+    /*{*/
+        /*background-color: blue;*/
+        /*padding: 10px;*/
+    /*    color: white;*/
+
+    /*}*/
+
+    /*div.navigation span:hover*/
+    /*{*/
+    /*    background-color: purple;*/
+    /*}*/
+
+    /*ul.navigation {*/
+    /*  list-style-type: none;*/
+    /*  margin: 0;*/
+    /*  padding: 0;*/
+    /*  overflow: hidden;*/
+    /*  background-color: #333;*/
+      position: -webkit-sticky; /* Safari */
+    /*  position: sticky;*/
+    /*  top: 0;*/
+    /*  font-family: Helvetica;*/
+    /*  color: green;*/
+    /*}*/
+
+    /*ul.navigation li {*/
+    /*  float: left;*/
+    /*}*/
+
+    /*ul.navigation li a {*/
+    /*  display: block;*/
+    /*  color: white;*/
+    /*  text-align: center;*/
+    /*  padding: 14px 16px;*/
+    /*  text-decoration: none;*/
+    /*}*/
+
+    /*ul.navigation li a:hover {*/
+    /*  background-color: #111;*/
+    /*}*/
+
+    /*ul.navigation .active {*/
+    /*  background-color: #4CAF50;*/
+    /*}*/
+
+    /*ul.nav_bar*/
+    /*{*/
+    /*    list-style-type: none;*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*    overflow: hidden;*/
+    /*    background-color: #333;*/
+    /*}*/
+
+    /*___________________________*/
+    /* End the Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /*_____________________*/
+    /* Begin Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /* Insert information */
+
+    /*___________________*/
+    /* End Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+/*******************************/
+/*                             */
+/*  End Navigation Bar Styles  */
+/*                             */
+/*******************************/
+
+/*********************************/
+/*                               */
+/*  Styles for the Collapsibles  */
+/*                               */
+/*********************************/
+
+.collapsible {
+  /*background-color: #777;*/
+  /*background: blue;*/
+  /*background: #1039A8;*/
+  background-color: #1039A8;
+  color: white;
+  cursor: pointer;
+  /*padding: 0px;*/
+  padding-bottom: 6.5px;
+  padding-left: 1px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  /*background-color: #555;*/
+  /*background-color: red;*/
+  /*background-color: #E70009;*/
+}
+
+.active
+{
+    background-color: #E70009;
+}
+
+.collapsible:after
+{
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    /*background-color: #E70009;*/
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+
+/*  End Styles for Collapsibles  */
+
+/*******************/
+/*                 */
+/*  Mobile Styles  */
+/*                 */
+/*******************/
+
+div.outermost_container
+{
+    /*background-color: #ffcc73;*/
+    /*max-width:300px;*/
+    /*width: 370px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.inflation_container
+{
+    margin-left: auto;
+    margin-right: auto;
+    /*border-style: solid;*/
+    margin: 0 auto;
+    padding: 2px;
+    /*padding-bottom: 5px;*/
+}
+
+div.years_and_months
+{
+    float: left;
+    width: 50%;
+    /*background-color: #85b8ff;*/
+    text-align: right;
+}
+
+div.drop_down
+{
+    /*background-color: red;*/
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+div.submit_mobile
+{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*.inflation_header*/
+/*{*/
+    /*font-weight: bold;*/
+/*    text-align: center;*/
+/*    border-color: coral;*/
+    /*border-width: 10px;*/
+/*    color: black;*/
+/*    margin: 0 auto;*/
+/*    font-size: 1px;*/
+/*}*/
+
+div.nintendo_background_image
+{
+    background-image: url("https://icons.iconarchive.com/icons/sykonist/console/256/Nintendo-mix-icon.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 64px 64px;
+}
+
+div.super_nintendo_background_image
+{
+    background-image: url("https://icons.iconarchive.com/icons/sykonist/console/256/Snes-icon.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    /*background-size: cover;*/
+    position: relative;
+    background-size: 64px 64px;
+}
+
+div.nintend_64_background_image
+{
+    background-image: url("https://icons.iconarchive.com/icons/sykonist/console/256/Nintendo-64-black-icon.png");
+    background-repeat: no-repeat;
+    /*background-position: right;*/
+    background-position: right bottom;
+    /*background-size: cover;*/
+    position: relative;
+    background-size: 64px 64px;
+}
+
+div.gamecube_background_image
+{
+    background-image: url("https://icons.iconarchive.com/icons/sykonist/console/256/Gamecube-purple-icon.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    /*background-size: cover;*/
+    position: relative;
+    background-size: 64px 64px;
+}
+
+div.wii_background_image
+{
+    background-image: url("https://icons.iconarchive.com/icons/sykonist/console/256/Wii-side-view-icon.png");
+    background-repeat: no-repeat;
+    /*background-position: right;*/
+    /*background-position: left;*/
+    background-position: right bottom;
+    /*background-size: cover;*/
+    position: relative;
+    background-size: 64px 64px;
+}
+
+div.wii_u_background_image
+{
+    background-image: url("https://icon-library.com/images/wii-u-icon/wii-u-icon-4.jpg");
+    background-repeat: no-repeat;
+    /*background-position: right;*/
+    /*background-position: left;*/
+    background-position: right bottom;
+    /*background-size: cover;*/
+    position: relative;
+    background-size: 75px 75px;
+}
+
+div.switch_background_image
+{
+    background-image: url("https://cdn2.iconfinder.com/data/icons/apple-products-2026/512/pear0-512.png");
+    background-repeat: no-repeat;
+    /*background-position: right;*/
+    /*background-position: left;*/
+    background-position: right bottom;
+    /*background-size: cover;*/
+    position: relative;
+    background-size: 96px 96px;
+}
+
+.collapsible_inflation
+{
+    background-color: #2b3675;
+    color: white;
+    cursor: pointer;
+    /*padding: 5px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    /*padding: 4px;*/
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold
+}
+
+.active_inflation, .collapsible_inflation:hover
+{
+  background-color: #555;
+}
+
+.collapsible_inflation:after
+{
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active_inflation:after
+{
+  content: "\2212";
+}
+
+.content_inflation
+{
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    /*transition: max-height 0.2s ease-out;*/
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+
+.nintendo_mobile
+{
+    /*font-family: 'Press Start 2P', cursive;*/
+    font-family: 'Press Start 2P';
+    color: #E70009;
+    font-weight: bold;
+    text-align: center;
+    font-size: 7vw;
+}
+
+ol.nintend_mobile
+{
+    /*border-left: 5px solid red;*/
+    font-family: Helvetica;
+    /*background: green;*/
+    /*list-style-type: decimal-leading-zero;*/
+}
+
+li.nintendo_mobile_list_lvl_01
+{
+    font-weight: bold;
+}
+
+ul.console_list_items
+{
+    /*background: blue;*/
+    margin: 0;
+    padding: 0px;
+    padding-left: 20px;
+
+}
+
+.list_lvl_01
+{
+    text-decoration: underline;
+}
+
+.nintendo_mobile_list_lvl_02
+{
+    font-weight: normal;
+    list-style-type: disc;
+    margin-left: -1.5em;
+    /*background-color: purple;*/
+    /*padding-left: 3em;*/
+}
+
+.nintendo_level_01 li
+{
+    font-family: Helvetica;
+    list-style-type: decimal;
+    /*padding-left: 0;*/
+    margin-left: 0em;
+    padding-left: 0em;
+    /*background-color: green;*/
+    background: orange;
+    /*display: block;*/
+}
+
+.nintendo_level_02 li
+{
+    font-family: Helvetica;
+    list-style-type: disc;
+    margin-left: -1.5em;
+    padding-left: 0em;
+    background-color: purple;
+    /*display: block;*/
+}
+
+.nintendo_div_table
+{
+    display: table;
+	width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+	/*background-color: green;*/
+}
+
+.nintendo_div_table_header
+{
+    /*background: green;*/
+    background-color: #ffe3e4;
+}
+
+.nintendo_div_table_body
+{
+    background: purple;
+}
+
+.nintendo_div_table_row
+{
+    background: red;
+}
+
+.nintendo_div_table_cell
+{
+    background: #f5f5f5;
+}
+
+
+.nintendo_console_font
+{
+    /*font-family: Helvetica;*/
+    font-family: 'Press Start 2P';
+    font-size: .85em;
+    font-weight: bold;
+    opacity: 0.6;
+    background: red;
+
+}
+
+div.cardinal_number
+{
+    width: 6%;
+    font-family: Helvetica;
+    /*font-family: 'Press Start 2P';*/
+    /*background: red;*/
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    font-size: 5.25vw;
+}
+
+div.console_name
+{
+    width: 90%;
+    font-size: 5.25vw;
+    /*background: green;*/
+    /*font-family: 'Press Start 2P';*/
+    font-family: Helvetica;
+    float: left;
+    padding: 0px;
+    display: inline-block;
+    /*border: 5px solid red;*/
+}
+
+.snes
+{
+    /*font-family: 'snes', sans-serif;*/
+    font-family: 'snes';
+}
+
+ol.footnotes_mobile
+{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+
+/***********************/
+/*                     */
+/*  End Mobile Styles  */
+/*                     */
+/***********************/
+
+body
+{
+    font-family: Helvetica;
+}
+
+div
+{
+    font-family: Helvetica;
+}
+
+nes-mario
+{
+    /*height: 50px;*/
+    font-size: 50px
+}
+
+.no_border td
+{
+    border: 0;
+}
+
+
+
+/*button:hover*/
+/*{*/
+
+/*}*/
+
+.column_left
+{
+  float: left;
+  width: 75%;
+  padding: 10px;
+  /*background-color: #d4d4d4;*/
+  /*background-color: #ffcc73;*/
+  /*background-color: orange;*/
+  /*Should be removed. Only for demonstration */
+  /*height: 300px; */
+}
+
+.column_right
+{
+    /*float: left;*/
+    float: right;
+    width: 25%;
+    padding: 10px;
+    /*position: fixed;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*Should be removed. Only for demonstration */
+    /*height: 300px; */
+}
+
+/********************************************/
+/*                                          */
+/*  Inflation & Global Filter  Form Styles  */
+/*                                          */
+/********************************************/
+
+    /****************/
+    /*              */
+    /*  Non-Mobile  */
+    /*              */
+    /****************/
+
+.top_right_corner
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #d6ecff;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    font-family: Arvo;
+}
+
+.inflation_container
+{
+    z-index: 1;
+    background-color: #d6ecff;
+    float: right;
+    width: 25%;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    text-align: center;
+    /*position: fixed;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-bottom: 10px;
+
+}
+
+.inflation_header
+{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.inflation_row
+{
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.inflation_column
+{
+    flex: 50%;
+    font-size: 20px;
+    font-family: Arvo;
+}
+
+.inflation_right_column
+{
+    float: right;
+}
+
+button.nintendo_submit
+{
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    z-index: 0;
+}
+
+button.nintendo_submit:hover
+{
+    background-color: #ffdf94;
+}
+
+h2.right_column_header_h2
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3.right_column_header_h3
+{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+hr.right_column_divider
+{
+    display:block;
+    background-color: black;
+    border-width: 5px;
+
+}
+
+tfoot
+{
+        display: table-header-group;
+}
+
+tfoot input
+{
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+input.table_search
+{
+    width: 75%;
+}
+
+input.table_search[type=text]:focus
+{
+  background-color: lightblue;
+  border: 3px solid black;
+}
+
+
+
+/*tfoot {*/
+/*    display: table-header-group;*/
+/*}*/
+
+/*tfoot*/
+/*{*/
+/*    display: table-row-group;*/
+/*}*/
+
+/*tfoot*/
+/*{*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+    /************/
+    /*          */
+    /*  Mobile  */
+    /*          */
+    /************/
+
+
+/*******************************/
+/*                             */
+/*  End Inflation Form Styles  */
+/*                             */
+/*******************************/
+
+/********************************/
+/*                              */
+/*  Console Information Styles  */
+/*                              */
+/********************************/
+
+    /*___________________*/
+    /* Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+div.level_1_container
+{
+    float: left;
+    width: 75%;
+    font-size: 1.3em;
+}
+
+h1.page_heading
+{
+    font-size: 4vw;
+}
+
+div.sub_container
+{
+    margin: 0 auto;
+    width: 86%;
+}
+
+.nintendo th
+{
+    font-size: 1em;
+}
+
+.microsoft th
+{
+    background-color: #107c10;
+    color: white;
+    margin: 0 auto;
+}
+
+.microsoft_crop
+{
+    width: 722px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    /*border-style: solid;*/
+    margin-bottom: 10px;
+}
+
+.microsoft_crop img
+{
+    width: 1000px;
+    /*height: 300px;*/
+    margin-top: -125px;
+    margin-left: -125px;
+}
+
+.nintendo_crop
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border-style: solid;*/
+    margin-bottom: 10px;
+    /*background-color: lightblue;*/
+}
+
+.nintendo_crop img
+{
+    width: 800px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+    margin-left: -5px;
+    margin-right: -100px;
+}
+
+table.console_table
+{
+    margin: auto;
+    width: 98%;
+    /*border-style: solid;*/
+    /*border-width: 5px;*/
+    border-collapse: collapse;
+}
+
+.console_table table, tr, td, th
+{
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* Zebra banding for table rows*/
+.console_table tr:nth-child(even)
+{
+    background-color: #ECF0F1;
+}
+
+/* Hover color for table rows */
+.console_table tr:hover
+{
+    background-color: #fff6d4;
+}
+
+.release_prices_table td:nth-child(5), .release_prices_table th:nth-child(5)
+{
+    /*background-color: yellow;*/
+    /*visibility: hidden;*/
+    /*display: none;*/
+}
+
+/* Zebra banding for table rows*/
+/*.release_prices_table tr:nth-child(even)*/
+/*{*/
+/*    background-color: #ECF0F1;*/
+/*}*/
+
+    /*_______________*/
+    /* Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+
+/************************************/
+/*                                  */
+/*  End Console Information Styles  */
+/*                                  */
+/************************************/
+
+/* _______________ */
+/*|Footnote Styles|*/
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+ol.footnotes
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 25px;
+}
+
+/*_____________________*/
+/* End Footnote Styles */
+/*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+/*_______________________*/
+/* Begin Nav Menu Styles */
+/*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /*_________________________*/
+    /* Begin Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /*.dropdown:hover .dropdown-menu*/
+    /*{*/
+    /*    display: block;*/
+    /*}*/
+
+    /*.dropdown-menu*/
+    /*{*/
+    /*    margin-top: 0;*/
+    /*}*/
+
+    /*.navbar-custom*/
+    /*{*/
+    /*    background-color: black;*/
+    /*    z-index: 2;*/
+    /*}*/
+
+    /*.nav-link*/
+    /*{*/
+    /*    color: white;*/
+    /*    margin: 0px;*/
+    /*}*/
+
+    /*.nav-item:hover*/
+    /*{*/
+    /*    color: red;*/
+    /*    background-color: #3d3d3d;*/
+    /*    display: block;*/
+    /*}*/
+
+
+    /*.dropdown-toggle:hover*/
+    /*{*/
+    /*    color: green;*/
+    /*}*/
+
+    /*.navbar-expand-sm*/
+    /*{*/
+    /*    margin: 0px;*/
+    /*}*/
+
+
+.navbar
+{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 50%;
+}
+
+.navigation_link
+{
+    display: inline-block;
+}
+
+.navigation_bar
+{
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: Arvo;
+}
+
+.navigation_bar li
+{
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.navigation_bar li:hover
+{
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #404040;
+  color: white;
+}
+
+.navigation_bar a
+{
+    color: white;
+}
+
+/*.navbar a*/
+/*{*/
+/*    float: left;*/
+    /*display: inline-block;*/
+/*    color: #f2f2f2;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*    font-size: 17px;*/
+/*}*/
+
+.navbar a:hover
+{
+    background: #ddd;
+    color: black;
+}
+
+    /*_______________________*/
+    /* End Non-Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /*_____________________*/
+    /* Begin Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+    /* Insert information */
+
+    /*___________________*/
+    /* End Mobile Styles */
+    /*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+/*_____________________*/
+/* End Nav Menu Styles */
+/*‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
+.heading_01
+{
+    color: black;
+    font-weight: 1000;
+    text-align: center;
+    font-family: Arvo;
+}
+
+body
+{
+    font-family: Arvo;
+}
+
+/*col.inflation_adjustment*/
+/*{*/
+/*    background-color: red;*/
+/*}*/
+
+.spinner
+{
+    border-style: solid;
+    width: 50%;
+    margin: auto;
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader */
+.spinning_loader
+{
+    /*border: 25px solid #f3f3f3;*/
+    margin: auto;
+    border: 20px solid #bfbfbf;
+    border-radius: 75%;
+    border-top: 20px solid #3498db;
+    width: 175px;
+    height: 175px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+
+
+  position: relative;
+  top: 25%;
+  /*left: 25%;*/
+  /*-ms-transform: translate(-50%, -50%);*/
+  /*transform: translate(-50%, -50%);*/
+
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader */
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
+/* https://www.w3schools.com/howto/howto_css_modals.asp */
+
+.spinner_wrapper_001
+{
+    /* Hidden by default */
+    display: none;
+
+    /* Stay in place */
+    position: fixed;
+
+    /* Sit on top */
+    z-index: 1;
+
+    /* Location of modal container */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+
+    /* Full width */
+    /*width: 100%;*/
+    width: 50%;
+
+    /* Full height */
+    height: 50%;
+
+    /* Enable scroll if needed */
+    overflow: auto;
+
+    /* Fallback color */
+    background-color: rgb(0,0,0);
+
+    /* Black w/ opacity */
+    background-color: rgba(51,146,255,0.4);
+}
+
+.spinner_content_001
+{
+    background-color: red;
+    width: 50%;
+    height: 50%;
+}
+
+.laboratory
+{
+    width: 75%;
+    background-color: #a8d3ff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.inflation_adjusted_price_cell
+{
+    display: none;
+}
+
+.spinner_wrapper
+{
+    /* Hidden by default */
+    /*display: none;*/
+
+    /* Stay in place */
+    /*position: fixed;*/
+    position: absolute;
+
+    /* Sit on top */
+    z-index: 1;
+
+    /* Full width */
+    width: 100%;
+
+    background-color: rgb(0,0,0); /* Fallback color */
+
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity
+
+    /* Full height */
+    height: 100%;
+
+    /* Location of modal container */
+    padding:0;
+    left: 0;
+    top: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    visibility: hidden;
+
+}
+
+.spinner_loader
+{
+    background-color: red;
+    width: 50%;
+    height: 50%;
+    border: 5px solid purple;
+
+}
+
+.loaidng_text
+{
+    margin-top: 10px;
+    background-color: red;
+}
