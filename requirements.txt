@@ -1,2 +1,2 @@
 flask
-pip Frozen-Flask > requirements.txt
+pip frozen > requirements.txt
