@@ -1,2 +1,2 @@
-flask_frozen
-Freezer
+flask
+Frozen-Flask
